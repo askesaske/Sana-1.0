@@ -1,0 +1,893 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "PT Root UI Web Bold";
+  src: url("../fonts/PT%20Root%20UI_Bold.eot");
+  src: url("../fonts/PT%20Root%20UI_Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PT%20Root%20UI_Bold.woff2") format("woff2"), url("../fonts/PT%20Root%20UI_Bold.woff") format("woff"), url("../fonts/PT%20Root%20UI_Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Root UI Web Medium";
+  src: url("../fonts/PT%20Root%20UI_Medium.eot");
+  src: url("../fonts/PT%20Root%20UI_Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/PT%20Root%20UI_Medium.woff2") format("woff2"), url("../fonts/PT%20Root%20UI_Medium.woff") format("woff"), url("../fonts/PT%20Root%20UI_Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Root UI Web Regular";
+  src: url("../fonts/PT%20Root%20UI_Regular.eot");
+  src: url("../fonts/PT%20Root%20UI_Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PT%20Root%20UI_Regular.woff2") format("woff2"), url("../fonts/PT%20Root%20UI_Regular.woff") format("woff"), url("../fonts/PT%20Root%20UI_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.container-2 {
+  max-width: 1600px;
+  margin: 0px auto;
+  padding: 0px 5px;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.nav-row {
+  height: 88px;
+}
+
+.header {
+  background-color: #0a1833;
+  width: 100%;
+  height: 88px;
+}
+.header .logo {
+  margin-right: 41px;
+}
+.header .logo img {
+  max-width: 100%;
+  height: auto;
+}
+.header .vertical_divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin-right: 16px;
+}
+.header a {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "PT Root UI Web Bold";
+  font-size: 13px;
+  letter-spacing: 0.78px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+.header a.active {
+  color: #ffffff;
+}
+.header a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.header .search {
+  position: relative;
+  margin: 0 64px 0 64px;
+}
+.header .search input {
+  width: 784px;
+  height: 52px;
+  border-radius: 4px;
+  border: 2px solid #ffffff;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "PT Root UI Web Medium";
+  font-size: 17px;
+  line-height: 24px;
+  background-color: #0a1833;
+  padding-left: 14px;
+}
+.header .search .search__icon {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+}
+.header .login {
+  position: relative;
+}
+.header .login a {
+  color: #ffffff;
+}
+.header .login .login__wicon:before {
+  content: "";
+  background: url("../img/login-icon.png");
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 3px;
+  left: -9px;
+}
+
+.content-block {
+  margin-top: 48px;
+}
+
+.nav-panel {
+  width: 376px;
+  height: 424px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.nav-panel ul {
+  font-family: "PT Root UI Web Bold";
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  margin-left: 56px;
+}
+.nav-panel ul li {
+  margin-top: 32px;
+}
+.nav-panel ul a {
+  color: #bebfc2;
+}
+.nav-panel ul .active {
+  color: #0a1833;
+}
+.nav-panel ul .all-courses:before {
+  content: "";
+  background: url("../img/all-courses.png");
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 0px;
+  left: -30px;
+}
+.nav-panel ul .marketing:before {
+  content: "";
+  background: url("../img/marketing.png");
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 56px;
+  left: -30px;
+}
+.nav-panel ul .photo:before {
+  content: "";
+  background: url("../img/photo.png");
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 112px;
+  left: -30px;
+}
+.nav-panel ul .video:before {
+  content: "";
+  background: url("../img/video.png");
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 168px;
+  left: -30px;
+}
+.nav-panel ul .bussines:before {
+  content: "";
+  background: url("../img/bussines.png");
+  height: 24px;
+  width: 21px;
+  position: absolute;
+  top: 225px;
+  left: -30px;
+}
+.nav-panel ul .webinar:before {
+  content: "";
+  background: url("../img/webinar.png");
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 280px;
+  left: -30px;
+}
+.nav-panel ul .blog:before {
+  content: "";
+  background: url("../img/blog.png");
+  height: 24px;
+  width: 19px;
+  position: absolute;
+  top: 336px;
+  left: -28px;
+}
+
+.content {
+  margin-left: 32px;
+  width: 1182px;
+}
+.content .filter .dropdown {
+  margin-right: 16px;
+}
+.content .filter .dropdown .custom-dropdown {
+  width: 260px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #dedfe0;
+  text-align: left;
+  background-color: #f5f6f7;
+  color: #0a1833;
+  font-family: "PT Root UI Web Medium";
+  font-size: 16px;
+  line-height: 24px;
+}
+.content .filter .dropdown .custom-dropdown span {
+  margin-right: 105px;
+  padding-left: 16px;
+}
+.content .filter .dropdown .custom-dropdown .homework {
+  margin-right: 35px;
+}
+.content .filter .dropdown .dropdown-menu {
+  font-family: "PT Root UI Web Medium";
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #f5f6f7;
+}
+.content .filter .btn-text {
+  font-family: "PT Root UI Web Medium";
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 16px;
+}
+.content .filter .btn-text .active {
+  background-color: #edeef0;
+}
+.content .filter .btn-text label {
+  border: 1px solid #dedfe0;
+  padding-left: 12px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.content .filter .btn-text .left-btn {
+  width: 97px;
+  height: 48px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.content .filter .btn-text .right-btn {
+  width: 121px;
+  height: 48px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.content .filter .btn-text .long {
+  width: 101px;
+}
+.content .filter .btn-text .short {
+  width: 102px;
+}
+.content .courses .courses__col .courses__item {
+  margin-top: 32px;
+  padding-bottom: 33px;
+  width: 376px;
+  background-color: #ffffff;
+  position: relative;
+}
+.content .courses .courses__col .courses__item img {
+  max-width: 100%;
+  height: auto;
+}
+.content .courses .courses__col .courses__item .price-free {
+  position: absolute;
+  bottom: 60px;
+  right: 25px;
+}
+.content .courses .courses__col .courses__item .courses__button {
+  font-family: "PT Root UI Web Medium";
+  font-size: 15px;
+  line-height: 24px;
+  vertical-align: middle;
+  color: #0a1833;
+  text-align: center;
+  margin-top: 20px;
+}
+.content .courses .courses__col .courses__item .courses__button .active {
+  background-color: #85abf7;
+  color: #ffffff;
+}
+.content .courses .courses__col .courses__item .courses__button .active:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: inline-block;
+  margin-bottom: 2.5px;
+}
+.content .courses .courses__col .courses__item .courses__button .courses__button-left {
+  width: 70px;
+  height: 28px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+}
+.content .courses .courses__col .courses__item .courses__button .courses__button-right {
+  width: 125px;
+  height: 28px;
+  background-color: #f5f6f7;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+}
+.content .courses .courses__col .courses__item .courses__text {
+  margin-left: 20px;
+}
+.content .courses .courses__col .courses__item .date {
+  color: #7a5de9;
+  font-family: "PT Root UI Web Medium";
+  font-size: 17px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+.content .courses .courses__col .courses__item .title {
+  margin-top: 15px;
+  width: 263px;
+}
+.content .courses .courses__col .courses__item .title a {
+  color: #0a1833;
+  font-family: "PT Root UI Web Bold";
+  font-size: 20px;
+  line-height: 24px;
+  -webkit-text-decoration: underline #ecedef;
+          text-decoration: underline #ecedef;
+}
+.content .courses .courses__col .courses__item .title a:hover {
+  -webkit-text-decoration: underline #0a1833;
+          text-decoration: underline #0a1833;
+}
+.content .courses .courses__col .courses__item .price {
+  margin-top: 17px;
+  color: #fb3e55;
+  font-family: "PT Root UI Web Bold";
+  font-size: 24px;
+  line-height: 32px;
+}
+.content .courses .courses__col .courses__item .price .line-through {
+  text-decoration: line-through;
+  color: #dedfe0;
+  margin-right: 10px;
+}
+.content .load a {
+  width: 293px;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid #d4d5d6;
+  background-color: #f5f6f7;
+  color: #a2a2a3;
+  font-family: "PT Root UI Web Bold";
+  font-size: 14px;
+  letter-spacing: 0.84px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-top: 80px;
+  padding-top: 18px;
+}
+.content .contact {
+  margin-top: 120px;
+  padding-left: 64px;
+  background-image: url("../img/contact-bg.png");
+  height: 184px;
+  padding-top: 60px;
+}
+.content .contact .row {
+  height: 100%;
+}
+.content .contact .contact__text {
+  color: #ffffff;
+  font-family: "PT Root UI Web Regular";
+  font-size: 28px;
+  line-height: 32px;
+  margin-right: 105px;
+}
+.content .contact .contact__form {
+  position: relative;
+  margin-right: 35px;
+}
+.content .contact .contact__form input {
+  /* Style for "Rectangle" */
+  width: 376px;
+  height: 47px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  font-family: "PT Root UI Web Regular";
+  font-size: 18px;
+  line-height: 46px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.content .contact .contact__form input::placeholder {
+  color: #ffffff;
+  font-family: "PT Root UI Web Regular";
+  font-size: 18px;
+  line-height: 46px;
+}
+.content .contact .contact__form select {
+  width: 100px;
+  height: 46px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "PT Root UI Web Regular";
+  font-size: 18px;
+  line-height: 46px;
+  position: absolute;
+  right: 0;
+}
+.content .contact .contact__form select option {
+  color: black;
+  background-color: rgba(0, 0, 0, 0);
+}
+.content .contact .contact__button {
+  /* Style for "Rectangle" */
+  width: 173px;
+  height: 52px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+.content .contact .contact__button button {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "PT Root UI Web Bold";
+  font-size: 14px;
+  letter-spacing: 0.84px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 14px;
+}
+.content .horizont-divider {
+  max-width: 1182px;
+  height: 1px;
+  background-color: #edeef0;
+  margin-top: 64px;
+}
+.content .footer {
+  margin-top: 32px;
+}
+.content .footer .visible {
+  display: none;
+}
+.content .footer .label {
+  color: #0a1833;
+  font-family: "PT Root UI Web Bold";
+  font-size: 14px;
+  letter-spacing: 0.84px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.content .footer .label-1 {
+  margin-right: 512px;
+}
+.content .footer .label-2 {
+  margin-right: 229px;
+}
+.content .footer .footer__col {
+  max-width: 249px;
+}
+.content .footer .footer__col a {
+  text-decoration: none;
+  color: #a2a2a3;
+  font-family: "PT Root UI Web Regular";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.content .footer .footer__col a:hover {
+  -webkit-text-decoration: underline #a2a2a3;
+          text-decoration: underline #a2a2a3;
+}
+.content .social {
+  margin-top: 16px;
+  padding-bottom: 20px;
+}
+.content .social .copyrights {
+  color: #d4d5d6;
+  font-family: "PT Root UI Web Regular";
+  font-size: 17px;
+  line-height: 24px;
+  margin-right: 187px;
+}
+.content .social .social__icon {
+  margin-right: 12px;
+}
+
+.visible-sm {
+  display: none;
+}
+
+.visible-xs {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  .visible-xs {
+    display: none;
+  }
+
+  .visible-sm {
+    display: none;
+  }
+
+  .container-2 {
+    max-width: 1400px;
+  }
+
+  .header .search input {
+    width: 675px;
+  }
+
+  .nav-panel {
+    width: 320px;
+  }
+
+  .content {
+    width: 1038px;
+  }
+
+  .courses .courses__col .courses__item {
+    width: 325px !important;
+  }
+
+  .contact__text {
+    font-size: 23px !important;
+    margin-right: 50px !important;
+  }
+
+  .footer .visible {
+    display: none;
+  }
+  .footer .label-1 {
+    margin-right: 405px !important;
+  }
+  .footer .label-2 {
+    margin-right: 192px !important;
+  }
+}
+@media (max-width: 1400px) {
+  .visible-xs {
+    display: none;
+  }
+
+  .visible-sm {
+    display: none;
+  }
+
+  .container-2 {
+    max-width: 1232px;
+  }
+
+  .nav-panel {
+    max-width: 296px;
+  }
+
+  .adapt-dropdown {
+    width: 210px !important;
+  }
+  .adapt-dropdown span {
+    margin-right: 57px !important;
+  }
+
+  .dropdown {
+    margin-right: 8px !important;
+  }
+
+  .content {
+    width: 910px;
+    margin-left: 16px;
+  }
+  .content .filter .btn-text {
+    margin-right: 8px;
+  }
+  .content .filter .dropdown .custom-dropdown {
+    width: 247px;
+  }
+  .content .filter .dropdown .custom-dropdown .homework {
+    margin-right: 23px;
+  }
+  .content .courses .courses__col .courses__item {
+    width: 296px !important;
+  }
+  .content .courses .courses__col .courses__item .price-free {
+    bottom: 75px;
+    width: 50px;
+  }
+  .content .contact {
+    padding-top: 40px;
+  }
+  .content .contact .contact__text {
+    margin-bottom: 20px;
+  }
+  .content .contact .contact__form input {
+    width: 565px;
+  }
+  .content .footer .hide {
+    display: none;
+  }
+  .content .footer .visible {
+    display: inline-block;
+  }
+  .content .footer .label-1 {
+    margin-right: 295px !important;
+  }
+  .content .footer .label-2 {
+    margin-right: 173px !important;
+  }
+
+  .header .search input {
+    width: 540px;
+  }
+}
+@media (max-width: 1232px) {
+  .visible-xs {
+    display: none;
+  }
+
+  .visible-sm {
+    display: none;
+  }
+
+  .container-2 {
+    max-width: 992px;
+  }
+
+  .header .search {
+    margin: 0 30px 0 20px;
+  }
+  .header .search input {
+    width: 390px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .logo {
+    margin-right: 25px;
+  }
+
+  .vertical-divider {
+    margin-right: 3px;
+  }
+
+  .content {
+    margin-left: 16px;
+  }
+  .content .filter .dropdown .custom-dropdown {
+    width: 220px;
+  }
+  .content .filter .dropdown .custom-dropdown .homework {
+    margin-right: 0px;
+  }
+  .content .courses .courses__col .courses__item {
+    width: 296px !important;
+  }
+  .content .courses .courses__col .courses__item .price-free {
+    bottom: 75px;
+    width: 50px;
+  }
+  .content .adapt-dropdown {
+    width: 160px !important;
+  }
+  .content .adapt-dropdown span {
+    margin-right: 10px !important;
+  }
+}
+@media (max-width: 992px) {
+  .visible-xs {
+    display: none;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  .visible-sm {
+    display: inline-block;
+  }
+
+  .container-2 {
+    max-width: 768px;
+    padding: 0;
+  }
+
+  .content {
+    margin: 0;
+  }
+  .content .courses .courses__col .courses__item .hide {
+    display: none;
+  }
+  .content .filter .btn-text {
+    display: none;
+  }
+  .content .filter .filter-button {
+    width: 115px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #d4d5d6;
+    background-color: #f5f6f7;
+    padding: 10px 0 0 35px;
+    position: relative;
+  }
+  .content .filter .filter-button a {
+    color: #0a1833;
+    font-family: "PT Root UI Web Medium";
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .content .filter .filter-button a:before {
+    content: "";
+    background: url("../img/filter-img.png");
+    height: 19px;
+    width: 17px;
+    position: absolute;
+    top: 11px;
+    left: 12px;
+  }
+  .content .filter .filter-button a:hover {
+    text-decoration: none;
+  }
+  .content .contact {
+    width: 100%;
+  }
+  .content .contact .contact__form input {
+    width: 422px;
+  }
+  .content .footer .label-1 {
+    margin-right: 433px !important;
+  }
+}
+@media (max-width: 768px) {
+  .hide-xs {
+    display: none;
+  }
+
+  .visible-xs {
+    display: inline-block;
+  }
+
+  .container-2 {
+    max-width: 320px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .header .logo {
+    margin-right: 100px;
+  }
+
+  .content .courses .courses__col .courses__item {
+    width: 320px !important;
+  }
+  .content .filter .dropdown .custom-dropdown {
+    width: 236px !important;
+    margin-left: 14px;
+  }
+  .content .filter .filter-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #d4d5d6;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: #f5f6f7;
+  }
+  .content .load a {
+    width: 288px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid #d4d5d6;
+    background-color: #f5f6f7;
+    margin: 32px auto;
+  }
+  .content .contact {
+    width: 320px;
+    height: 200px;
+    background-image: url("../img/contact-xs-bg.png");
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .content .contact .contact__text {
+    margin: 10px 0 -5px 0;
+  }
+  .content .contact .contact__form input {
+    width: 273px;
+    margin-bottom: 10px;
+  }
+  .content .contact .contact__button {
+    width: 273px;
+  }
+  .content .social {
+    position: relative;
+  }
+  .content .social .copyrights {
+    width: 200px;
+    position: absolute;
+    top: 124px;
+    left: 71px;
+  }
+  .content .social .social__icon {
+    margin: 48px auto;
+  }
+
+  .horizont-divider {
+    width: 320px;
+  }
+}
